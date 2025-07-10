@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Open Me When...</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="start-screen" id="startScreen">
+    <h1>OPEN MEEEE</h1>
+    <button onclick="startWebsite()">Click Me</button>
+    <h6>*im sorry if this is cringe*</h6>
+  </div>
+  <div class="mode-toggle">
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider round"></span>
+  </label>
+</div>
+  <div class="container">
+    <h1>Open Me When...</h1>
+  <div class="buttons">
+  <button class="alt-button" onclick="openCard('Random')">Random messages that I want to say</button>
+  <button class="alt-button" onclick="openCard('challange')">Open When You Want a Challenge</button>
+</div>
+
+    <div class="buttons">
+      <button onclick="openCard('sad')">You're Sad</button>
+      <button onclick="openCard('happy')">You're Happy</button>
+      <button onclick="openCard('hungry')">You're Hungry</button>
+      <button onclick="openCard('miss')">You Miss Me</button>
+      <button onclick="openCard('angry')">You're Angry at Me</button>
+      <button onclick="openCard('love')">You Need to Know How Much I Love You</button>
+      <button onclick="openCard('worry')">You’re Worried</button>
+      <button onclick="openCard('birthday')">It’s Your Birthday</button>
+      <button onclick="openCard('Anniversary')">It’s Our Anniversary</button>
+      <button onclick="openCard('Pep')">You Could Use a Little Pep Talk</button>
+      <button onclick="openCard('Valentine')">It’s Valentine’s Day</button>
+      <button onclick="openCard('Lonely')">You Are Feeling Lonely</button>
+      <button onclick="openCard('Christmas')">It’s Christmas Day</button>
+      <button onclick="openCard('sleep')">You Can’t Fall Asleep</button>
+      <button onclick="openCard('dance')">Video of me dancing</button>
+      <button onclick="openCard('Want')">You Want Me!</button>
+      <button onclick="openCard('Excited')">You’re Excited</button>
+      <button onclick="openCard('Tired')">You Feel Tired</button>
+      <button onclick="openCard('long')">You had a long day</button>
+      <button onclick="openCard('Overwhelmed')">You’re Overwhelmed</button>
+      <button onclick="openCard('Giveup')">You Feel Like Giving Up</button>
+      <button onclick="openCard('Afraid')">You’re Afraid</button>
+      <button onclick="openCard('Decision')">You Need to Make a Big Decision</button>
+      <button onclick="openCard('Sick')">You Are Sick</button>
+      <button onclick="openCard('jealous')">I'm acting a little jealous </button>
+      <button onclick="openCard('Crazy')">I’m Driving You Crazy</button>
+      <button onclick="openCard('Disappointed')">You Are Disappointed</button>
+      <button onclick="openCard('date')">The Anniversary of us dating</button>
+      <button onclick="openCard('saidlove')">The day we said "i love you" to each other</button>
+      <button onclick="openCard('Stressed')">You Are Stressed</button>
+      <button onclick="openCard('Bored')">You Are Bored</button>
+      <button onclick="openCard('ignore')">you ignore me</button>
+      <button onclick="openCard('I’m Angry')">I’m Angry</button>
+      <button onclick="openCard('Successful')">You Feel Successful</button>
+      <button onclick="openCard('Doubt')">You Doubt Yourself</button>
+      <button onclick="openCard('Bad')">You’re Having a Bad Day</button>
+      <button onclick="openCard('Compliment')">You Need to Hear a Compliment</button>
+      <button onclick="openCard('busy')">I'm busy</button>
+      <button onclick="openCard('inspiration')">you need inspiration</button>
+      <button onclick="openCard('my birthday')">it’s my birthday</button>
+      <button onclick="openCard('hitting')">you feel like hitting someone</button>
+      <button onclick="openCard('wonder')">you wonder what I’m doing right now</button>
+      <button onclick="openCard('forget')">I forget something important in your life</button>
+      <button onclick="openCard('vacation')">you go on a vacation (without me!?)</button>
+      <button onclick="openCard('advice')">you’ve ignored my advice </button>
+      <button onclick="openCard('bathroom')">you need something to read in the bathroom</button>
+      <button onclick="openCard('beauty')">you dont feel beautiful for some reason</button>
+      <button onclick="openCard('feet')">your feet hurt</button>
+      <button onclick="openCard('Fight')">We Had a Fight</button>
+      
+    </div>
+  </div>
+
+  <div class="popup hidden" id="popup">
+    <div class="popup-content" id="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <div id="popup-body"></div>
+    </div>
+  </div>
+  <audio id="start-audio" src="music/song.mp3"></audio>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

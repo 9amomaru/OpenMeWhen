@@ -1,0 +1,238 @@
+body {
+  background: #fff8f0;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  color: #ff6f91;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.buttons button {
+  background: #ffd6e0;
+  border: 2px dashed #ff6f91;
+  border-radius: 12px;
+  padding: 15px 25px;
+  font-size: 1.2em;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff6f91;
+}
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup-content {
+  animation: fadeScale 0.4s ease forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons button {
+  flex: 1 1 150px;
+}.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "🌙";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+  text-align: center;
+  line-height: 22px;
+}
+
+input:checked + .slider {
+  background-color: #444;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+  content: "☀️";
+}
+:root {
+  --bg: #fff8f0;
+  --text: #000;
+  --button-bg: #ffd6e0;
+  --button-border: #ff6f91;
+}
+
+body.dark-mode {
+  --bg: #1e1e1e;
+  --text: #eee;
+  --button-bg: #333;
+  --button-border: #888;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.buttons button {
+  background: var(--button-bg);
+  border: 2px dashed var(--button-border);
+  color: var(--text);
+}
+body.dark-mode .popup-content {
+  background: #2c2c2c;
+  color: #f1f1f1;
+  border: 2px solid #555;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+body.loaded .container,
+body.loaded .mode-toggle {
+  display: block;
+}
+
+.container,
+.mode-toggle {
+  display: none;
+}
+
+.start-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.start-screen h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.start-screen button {
+  background: #ffd6e0;
+  border: 2px dashed #ff6f91;
+  border-radius: 12px;
+  padding: 15px 25px;
+  font-size: 1.2em;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#popup-body {
+  max-height: 60vh; /* أو أي ارتفاع يناسبك */
+  overflow-y: auto;
+  padding-right: 10px; /* علشان ميبقاش الكلام لازق في السكروول */
+}
+#popup-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+#popup-body::-webkit-scrollbar-thumb {
+  background-color: #ff6f91;
+  border-radius: 8px;
+}
+.alt-button {
+  background: #e6ccff !important;  /* Soft orange */
+  border: 2px dashed #ff6f91 !important;
+  color: #5d4037 !important;
+  font-weight: bold;
+}
+
+.alt-button:hover {
+  background: #e6ccff;
+
+  transform: scale(1.05);
+}
+body.dark-mode .alt-button {
+  background: #5a4b81 !important;   /* Deep lavender */
+  border: 2px dashed #d1b3ff !important;
+  color: #f3eaff !important;
+}
+
+body.dark-mode .alt-button:hover {
+  background: #6a5a92 !important;
+}
